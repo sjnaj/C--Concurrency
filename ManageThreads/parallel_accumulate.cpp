@@ -24,6 +24,8 @@ struct Timer
     }
     ~Timer()
     {
+        // using namespace  std::chrono_literals;
+        // std::this_thread::sleep_for(1000ms);
         end = std::chrono::steady_clock::now();
         auto duration=std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
         std::cout << "Timer took" <<duration.count()<< "ms" << std::endl;
