@@ -1,0 +1,3 @@
+git ls-files | xargs wc -l :统计行数
+git rm -r --cached . :清除缓存
+git add . ：与两个命令结合可以重新应用.gitignore
