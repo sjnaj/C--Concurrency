@@ -1,0 +1,8 @@
+#include "sender.h"
+#include "receiver.h"
+#include "messages.h"
+#include "dispatcher.h"
+#include "template_dispatcher.h"
+#include "atm_machine.h"
+#include "bank_machine.h"
+#include "interface_machine.h"

@@ -59,6 +59,22 @@
         "thread": "cpp",
         "typeinfo": "cpp",
         "bit": "cpp",
-        "*.txx": "cpp"
+        "*.txx": "cpp",
+        "shared_mutex": "cpp",
+        "future": "cpp",
+        "csetjmp": "cpp",
+        "csignal": "cpp",
+        "any": "cpp",
+        "cfenv": "cpp",
+        "charconv": "cpp",
+        "codecvt": "cpp",
+        "cuchar": "cpp",
+        "forward_list": "cpp",
+        "unordered_set": "cpp",
+        "regex": "cpp",
+        "scoped_allocator": "cpp",
+        "typeindex": "cpp",
+        "valarray": "cpp",
+        "variant": "cpp"
     }
 }

@@ -34,6 +34,7 @@ struct Y
 // Y::Y():b(42){};always 42
 // Y::Y(){};indetermined unless at static duration
 
+X x;//global variable at static area
 int main()
 {
     aggregate x = {42, 3.14};

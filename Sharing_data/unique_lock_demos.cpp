@@ -22,6 +22,7 @@ public:
         std::swap(lhs.some_detail, rhs.some_detail);
     };
 };
+std::mutex some_mutex;
 void prepare_data() {}
 std::unique_lock<std::mutex> get_lock()
 {
@@ -31,10 +32,10 @@ std::unique_lock<std::mutex> get_lock()
     prepare_data();
     return lk; // compiler takes care of calling the move constructor
 }
-void do_something();
+void do_something(){}
 void process_data()
 {
-    std::unique_lock(get_lock());
+    std::unique_lock<std::mutex>lk(get_lock());
     do_something();
 }
 /*std::mutex the_mutex;

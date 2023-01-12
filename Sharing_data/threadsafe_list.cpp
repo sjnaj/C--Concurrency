@@ -14,6 +14,8 @@ class threadsafe_list
 
 private:
     std::list<std::pair<T, std::shared_ptr<std::mutex>>> data;
+    /// mutex is neither copyable nor moveable ,thus this pair is same,so should use pointer of mutex
+
     std::mutex lock_head; // use for lock head_node that can't be assigned a mutex
 
 public:
@@ -163,6 +165,10 @@ void remove_() // Inexplicably overload with remove in stdio.h
 }
 int main()
 {
+    // std::list<std::pair<int, std::mutex>> data(1);
+    // std::pair<int,std::mutex> a;
+    // a.first=2;
+    // data.insert(data.begin(), std::move(a));//can not copy or move
     std::thread t1{insert};
     std::thread t2{traverse};
     std::thread t3{remove_};
