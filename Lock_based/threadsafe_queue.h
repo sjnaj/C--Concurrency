@@ -10,7 +10,7 @@ private:
         std::shared_ptr<T> data;
         std::unique_ptr<node> next;
     };
-    mutable std::mutex head_mutex;
+    mutable std::mutex head_mutex;  
     mutable std::mutex tail_mutex;
     std::unique_ptr<node> head;
     std::condition_variable data_cond;
