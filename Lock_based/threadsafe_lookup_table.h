@@ -43,8 +43,10 @@ private:
             else
             {
                 // convert const_iterator to iterator
+                
                 auto i = data.begin();
                 std::advance(i, std::distance<bucket_iterator>(i, found_entry));
+
                 i->second = value;
             }
         }

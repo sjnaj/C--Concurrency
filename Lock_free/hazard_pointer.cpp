@@ -71,7 +71,7 @@ struct data_to_claim
     std::function<void(void *)> deleter;
     data_to_claim *next;
     template <typename T>
-    data_to_claim(T *p) : data(p), deleter(&do_delete), next(nullptr) {}
+    data_to_claim(T *p) : data(p), deleter(&do_delete<T>), next(nullptr) {}
     ~data_to_claim()
     {
         deleter(data);

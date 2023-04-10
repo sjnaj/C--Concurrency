@@ -28,6 +28,7 @@ int main()
     for (int i = 0; i < 10; i++)
     {
         threads[i] = std::thread(foo);
+        
     }
     std::for_each(threads.begin(), threads.end(), std::mem_fn(&std::thread::join));
 }
